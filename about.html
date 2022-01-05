@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>About</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="about.html">About</a>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="brand">
+                        <div>ALEXANDER MCCLEAD</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="two-column-wrapper">
+                    <div class="profile-image-wrapper">
+                        <img src=images/placeholder.jpg>
+                    </div>
+
+                    <div class="profile-content-wrapper">
+                        <h1>Hi, Thanks for visiting my site.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus lectus ac lacus euismod, luctus aliquam libero tincidunt. Ut et justo a lacus dapibus ullamcorper ut vel urna. Quisque ullamcorper posuere tempor. Nulla eget fringilla nisi. Morbi et elit semper, rutrum tortor at, rutrum libero. Integer tellus lectus, tempus id ultricies id, pulvinar a ligula. Quisque feugiat ex eget eros sodales sodales. Mauris ex nisl, egestas vel facilisis eu, blandit id felis. Aenean commodo lacus turpis, vel vehicula felis lobortis a. Curabitur quam urna, fringilla id rutrum quis, fermentum id risus. Aliquam sed aliquet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et lacus lectus. Cras facilisis augue nunc, vehicula mattis eros efficitur ac. Fusce rhoncus a velit vitae ullamcorper. Proin pharetra odio tincidunt, elementum ligula at, porttitor est.</p>
+
+                        <p>Sed diam lacus, gravida a bibendum sit amet, vehicula ac urna. Proin lorem nibh, dictum quis semper non, volutpat quis ante. Morbi sapien justo, ullamcorper quis semper a, finibus fringilla mauris. Morbi eget euismod leo, imperdiet semper nisl. Sed at feugiat nisi. Mauris laoreet mattis luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. In eget felis lorem. Etiam enim magna, hendrerit et ipsum at, vehicula rhoncus magna. Duis interdum tristique velit ac convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus arcu leo, pulvinar a leo sed, malesuada blandit eros. Suspendisse dictum risus eu elit ornare ullamcorper. Nam venenatis pretium aliquet. Vestibulum eu elementum sapien.</p>
+                        
+                        <p>Fusce ac ultrices arcu, a vestibulum quam. Nullam iaculis mauris consequat, pellentesque nisi non, convallis mauris. Integer finibus in quam at posuere. Maecenas finibus metus velit, lobortis tempus metus cursus eu. Nunc velit justo, hendrerit at risus ultricies, finibus elementum metus. Nunc in justo lacinia, euismod nisl pulvinar, ullamcorper sem. Nam accumsan felis eu convallis rutrum. Duis porttitor ipsum id ligula pharetra, id convallis est dignissim. Suspendisse sollicitudin sem in venenatis posuere. Donec maximus risus pretium ligula feugiat, at imperdiet velit dignissim. Nullam viverra ligula sed nisi scelerisque dapibus. Nullam tempor pellentesque hendrerit. Etiam congue mauris enim, ac congue ex maximus in. Vivamus feugiat mi erat, vel accumsan quam cursus at.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+        portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener("mouseover", () => {
+                portfolioItem.childNodes[1].classList.add("img-darken")
+            })
+        })
+        portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener("mouseout", () => {
+                portfolioItem.childNodes[1].classList.remove("img-darken")
+            })
+        })
+    </script>
+</html>

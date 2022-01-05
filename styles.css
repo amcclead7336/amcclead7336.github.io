@@ -56,22 +56,52 @@ body {
 }
 
 /* Portfolio Styles */
+
 .portfolio-items-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
+
+
+@media (min-width: 600px){
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 
 .portfolio-item-wrapper {
     position: relative;
 }
 
+.portfolio-img-background{
+    filter:brightness(50%);
+}
+@media (min-width: 600px){
+.portfolio-img-background{
+    filter:brightness(100%);
+}
+}
+
 .portfolio-img-background {
-    height: 350px;
+    height: 400px;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 600px){
+    .portfolio-img-background {
+        height: 350px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 
 .img-text-wrapper {
     position: absolute;
@@ -81,40 +111,78 @@ body {
     justify-content: center;
     height: 100%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 600px){
+    .img-text-wrapper {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 .logo-wrapper img {
-    width: 50%;
+    width: 25%;
     margin-bottom: 20px;
 }
 
-/* Needs to be more specific with selector */
-.img-text-wrapper .subtitle{
-    transition: 1s;
-    font-weight: 600;
-    color:transparent;
+@media (min-width: 600px){
+    .logo-wrapper img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }
-.img-text-wrapper:hover .subtitle {
+
+
+.img-text-wrapper .subtitle {
     font-weight: 600;
     color: lightseagreen;
-
 }
 
+
+@media (min-width: 600px){
+    .img-text-wrapper .subtitle{
+        transition: 1s;
+        font-weight: 600;
+        color:transparent;
+    }
+    .img-text-wrapper:hover .subtitle {
+        font-weight: 600;
+        color: lightseagreen;
+    }
+}
 .img-darken {
     transition: 1s;
     filter: brightness(20%);
 }
 
 /* About Page Styles */
-.two-column-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+
+@media (min-width: 600px){
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .profile-image-wrapper img {
     width: 100%;
+}
+
+@media (min-width: 600px){
+    .profile-image-wrapper img {
+        display: initial;
+        width: 100%;
+    }
 }
 
 .profile-content-wrapper {
